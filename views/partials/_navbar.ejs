@@ -1,0 +1,26 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="stylesheet" href="/stylesheets/style.css" />
+
+<nav>
+  <% if(user) { %>
+  <div class="navbar">
+    <h1 id="nav-header">Skyrockit</h1>
+    <div class="nav-links">
+      <a class="authlink" href="/users/<%=user._id%>/applications"
+        >Your Applications</a
+      >
+      <a class="authlink" href="/auth/sign-out">Sign Out</a>
+    </div>
+  </div>
+  <% } else { %>
+  <div class="navbar">
+    <h1 id="nav-header">Skyrockit</h1>
+    <div class="nav-links">
+      <a class="authlink" href="/auth/sign-in">Sign In</a>
+      <a class="authlink" href="/auth/sign-up">Sign Up</a>
+    </div>
+  </div>
+  <% } %>
+</nav>
